@@ -1,0 +1,17 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/big-pickle",
+  "default_agent": "build",
+  "instructions": ["AGENTS.md"],
+  "formatter": true,
+  "watcher": {
+    "ignore": [".shopify/**", "release/**", "*.zip"]
+  },
+  "permission": {
+    "bash": {
+      "git push *": "ask",
+      "shopify theme push *": "ask",
+      "shopify theme publish *": "ask"
+    }
+  }
+}

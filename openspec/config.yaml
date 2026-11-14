@@ -1,0 +1,28 @@
+schema: spec-driven
+
+context: |
+  Dama Maker es un tema Shopify para vender figuras 3D para el hogar, la oficina y accesorios.
+  Objetivo: publicar el tema en Shopify Theme Store.
+
+  Stack: Liquid, JSON templates, sections, blocks, snippets, LiquidDoc e i18n con t:.
+  Estructura: los archivos del tema están en la raíz del repo (requisito de la integración
+  GitHub ↔ Shopify); openspec/ para specs y cambios; .opencode/ para agentes y skills;
+  docs/ para documentación de referencia.
+
+  Herramientas: Shopify CLI 5.x, Theme Check, GitHub Actions, OpenCode con big-pickle.
+  Requisitos de Theme Store: accesibilidad WCAG 2.1 AA, rendimiento, theme editor con presets,
+  traducciones, documentación, soporte de navegadores y ausencia de dependencias inseguras.
+
+  Convenciones: kebab-case, CSS por componente, variables CSS para settings de una propiedad,
+  LiquidDoc en snippets/blocks y validación de {% schema %} con los JSON schemas de Shopify.
+
+rules:
+  proposal:
+    - Incluir objetivo, alcance, no-goals y criterios de aceptación medibles.
+    - Referenciar requisitos de Shopify Theme Store cuando aplique.
+  design:
+    - Documentar estructura de secciones/bloques, tokens de diseño y decisiones de accesibilidad.
+    - Indicar impacto en rendimiento y en el theme editor.
+  tasks:
+    - Agrupar por sección o bloque; tareas de 2-4 horas máximo.
+    - Incluir verificación con shopify theme check y pruebas manuales en la tienda dev.

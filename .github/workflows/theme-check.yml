@@ -1,0 +1,19 @@
+name: Theme Check
+
+on:
+  push:
+    branches: [main, production]
+  pull_request:
+
+jobs:
+  theme-check:
+    runs-on: ubuntu-latest
+    env:
+      SHOPIFY_CLI_NO_ANALYTICS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install -g @shopify/cli@5
+      - run: shopify theme check
